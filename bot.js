@@ -19,7 +19,7 @@ client.on('message', async message => {
 
     if (command === "list") {
         for (i in args) {
-            message.reply(`Command: ${command}\nArguments: ${args[i]}`);
+            message.reply(`Argument ${i}: ${args[i]}`);
         }
     }
     if (command === "hello") {
@@ -29,7 +29,7 @@ client.on('message', async message => {
         message.reply(`The \"Mango\" in my name is a reference to the fact that mangoes are abnormally high in myrcene, a terpene believed to be responsible for increased THC CB1 reception. Or something. Whatever.`);
     }
     if (command === "favoritebudtender") {
-        message.reply(`https://www.tiktok.com/@its.demo.ysmf/video/6899908289325239558?lang=en`);
+        message.reply(`https://www.tiktok.com/@its.demo.ysmf/video/6899908289325239558`);
     }
     
 }  catch(err) {message.reply(err);}
