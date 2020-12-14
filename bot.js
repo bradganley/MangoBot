@@ -1,5 +1,4 @@
 require('dotenv').config();
-var auth = require('./auth.json');
 const Discord = require('discord.js');
 const querystring = require('querystring');
 //BOT_URL=https://discord.com/oauth2/authorize?client_id=787936572754493481&scope=bot&permissions=268691458
@@ -25,6 +24,12 @@ client.on('message', async message => {
     }
     if (command === "hello") {
         message.reply(`Hey.`);
+    }
+    if (command === "why") {
+        message.reply(`The \"Mango\" in my name is a reference to the fact that mangoes are abnormally high in myrcene, a terpene believed to be responsible for increased THC CB1 reception. Or something. Whatever.`);
+    }
+    if (command === "favoritebudtender") {
+        message.reply(`https://www.tiktok.com/@its.demo.ysmf/video/6899908289325239558?lang=en`);
     }
     
 }  catch(err) {message.reply(err);}

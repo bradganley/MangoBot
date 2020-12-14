@@ -1,11 +1,12 @@
 {
-    "name": "MangoBot",
+    "name": "mangobot",
     "version": "0.5.0",
     "description": "A bot to manage the solemn vows of our users and also deliver additional myrcene via first-pass metabolism",
     "main": "bot.js",
     "author": "Brad Ganley",
     "dependencies": {
         "discord.js": "^12.5.1",
+        "dotenv": "^8.2.0",
         "node-fetch": "^2.6.1",
         "nodemon": "^2.0.6",
         "querystring": "^0.2.0"
