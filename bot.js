@@ -1,3 +1,8 @@
+/* The official bot of mango science weed smoking get high 
+fruit myrcene terpene chemistry intoxicant something whatever */
+
+
+
 require('dotenv').config();
 const Discord = require('discord.js');
 const querystring = require('querystring');
@@ -8,6 +13,9 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}. I'm ready for you, Daddy`);
 });
+
+//we need the join event listener
+
 client.on('message', async message => {
     try{
     if (!message.content.startsWith(prefix) || message.author.bot) {
@@ -35,5 +43,31 @@ client.on('message', async message => {
 }  catch(err) {message.reply(err);}
 });
 
-
+client.on('guildMemberAdd', member => {
+    //unverified member
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome-fellow-stoners');
+    
+    if (!channel) return;
+    // Send the message, mentioning the member
+    channel.send(`${member}, do you swear under penalty of vicious, unrelenting torture that you re of legal age in your state to consume cannabis products? Reply to this message with "yes" to be allowed into where the party happens or doesn't happen as far as you know.`);
+  });
+  
 client.login(process.env.CLIENT_TOKEN);
+
+/*
+OH SHIT IT'S A FUCKING GHOST OMG
+     .-.
+   .'   `.
+   :g g   :
+   : o    `.
+  :         ``.
+ :             `.
+:  :         .   `.
+:   :          ` . `.
+ `.. :            `. ``;
+    `:;             `:'
+       :              `.
+        `.              `.     .
+          `'`'`'`---..,___`;.-'
+
+*/
