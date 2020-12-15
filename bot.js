@@ -44,13 +44,9 @@ client.on('message', async message => {
 });
 
 client.on('guildMemberAdd', member => {
-    //unverified member
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome-fellow-stoners');
-    
-    if (!channel) return;
-    // Send the message, mentioning the member
-    channel.send(`${member}, do you swear under penalty of vicious, unrelenting torture that you re of legal age in your state to consume cannabis products? Reply to this message with "yes" to be allowed into where the party happens or doesn't happen as far as you know.`);
-  });
+   
+    member.guild.channels.cache.get('784114534238912574').send('🥭');
+});
   
 client.login(process.env.CLIENT_TOKEN);
 
