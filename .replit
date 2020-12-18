@@ -1,0 +1,2 @@
+language = "node.js"
+run = "npx nodemon bot.js"
