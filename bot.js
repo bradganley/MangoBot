@@ -1,10 +1,12 @@
 /* The official bot of mango science weed smoking get high 
 fruit myrcene terpene chemistry intoxicant something whatever */
-
+const fetch = require('node-fetch');
 require('dotenv').config();
 const Discord = require('discord.js');
 const querystring = require('querystring');
 //BOT_URL=https://discord.com/oauth2/authorize?client_id=787936572754493481&scope=bot&permissions=268691458
+
+
 const prefix = "🥭:";
 const client = new Discord.Client();
 const _db_ = require('@replit/database');
@@ -49,6 +51,12 @@ client.on('message', async message => {
         message.reply(`Argument ${i}: ${args[i]}`);
       }
     }
+    if (command === "meow") {
+      const catPic = await fetch('https://aws.random.cat/meow');
+      catSon = await catPic.json();
+      message.reply(catSon.file);
+    }
+    
     if (command === "accuse") {
       const argsNO = message.content.slice(prefix.length).trim().split(' ', 2)
       console.log(argsNO[1]);
@@ -62,12 +70,12 @@ client.on('message', async message => {
       if (message.member.roles.has('787812999435649026')) {
         console.log(`Yay, the author of the message has the role!`);
       } else {
-        
-      //let myRole = '787812999435649026';
-      message.member.addRole('787812999435649026').then(console.log).catch(console.error);
 
-      message.reply("You've broken through the firewall.");
-      console.log(`Nope, noppers, nadda.`);
+        //let myRole = '787812999435649026';
+        message.member.addRole('787812999435649026').then(console.log).catch(console.error);
+
+        message.reply("You've broken through the firewall.");
+        console.log(`Nope, noppers, nadda.`);
       }
 
     }
