@@ -49,6 +49,15 @@ client.on('message', async message => {
         message.reply(`Argument ${i}: ${args[i]}`);
       }
     }
+    if (command === "accuse") {
+      const argsNO = message.content.slice(prefix.length).trim().split(' ', 2)
+      console.log(argsNO[1]);
+      message.reply(`\n
+      :mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango:\n
+      Is that ${argsNO[1]}?! HOLY CRAP everybody get a load of this mango-ass mango!\n
+      :mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango:\n
+      `)
+    }
     if (command == "verify") {
       if (message.member.roles.has('787812999435649026')) {
         console.log(`Yay, the author of the message has the role!`);
