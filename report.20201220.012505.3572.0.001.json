@@ -1,0 +1,465 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20201220.012505.3572.0.001.json",
+    "dumpEventTime": "2020-12-20T01:25:05Z",
+    "dumpEventTimeStamp": "1608449105363",
+    "processId": 3572,
+    "threadId": null,
+    "cwd": "c:\\Users\\Brad\\Documents\\GitHub\\DemoBot",
+    "commandLine": [
+      "C:\\Program Files\\heroku\\bin\\\\..\\client\\bin\\node.exe",
+      "C:\\Program Files\\heroku\\bin\\\\..\\client\\bin\\run",
+      "releases",
+      "-n=1",
+      "--json"
+    ],
+    "nodejsVersion": "v12.16.2",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.2",
+      "v8": "7.8.279.23-node.34",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1e",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.2/node-v12.16.2-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.2/node-v12.16.2.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.2/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.19041",
+    "osVersion": "Windows 10 Pro Education",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Celeron(R) N4100 CPU @ 1.10GHz",
+        "speed": 1094,
+        "user": 12217062,
+        "nice": 0,
+        "sys": 11023906,
+        "idle": 78853078,
+        "irq": 1147609
+      },
+      {
+        "model": "Intel(R) Celeron(R) N4100 CPU @ 1.10GHz",
+        "speed": 1094,
+        "user": 15456312,
+        "nice": 0,
+        "sys": 9717468,
+        "idle": 76919953,
+        "irq": 232578
+      },
+      {
+        "model": "Intel(R) Celeron(R) N4100 CPU @ 1.10GHz",
+        "speed": 1094,
+        "user": 13589453,
+        "nice": 0,
+        "sys": 8320125,
+        "idle": 80184156,
+        "irq": 120765
+      },
+      {
+        "model": "Intel(R) Celeron(R) N4100 CPU @ 1.10GHz",
+        "speed": 1094,
+        "user": 14621343,
+        "nice": 0,
+        "sys": 9115593,
+        "idle": 78356796,
+        "irq": 103578
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "7c:b2:7d:d7:dc:fa",
+        "address": "fe80::5456:3e44:c9b7:9960",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 22
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "7c:b2:7d:d7:dc:fa",
+        "address": "192.168.1.239",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "Alecto"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff62b382309",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b386869",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b3856e8",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b4add82",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bcca27e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bcb2351",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bb7e8ac",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bb86831",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bb7be03",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bb7a474",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bb9b67d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b9013d1",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c11730d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c0c3b17",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c09c2bc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c09c2bc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c09c2bc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c09c2bc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c09c2bc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c09c2bc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c0997f1",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c0993dc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bbd7f63",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bbd78e6",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62bca895d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b4d658e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b4d67c7",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b4d4eaa",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b4695cc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b4d6223",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62b356a9c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff62c1cf3f8",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ffb0a3d7034",
+      "symbol": "BaseThreadInitThunk+20"
+    },
+    {
+      "pc": "0x00007ffb0b15d0d1",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 3194880,
+    "totalCommittedMemory": 3194880,
+    "usedMemory": 2423592,
+    "availableMemory": 2093956168,
+    "memoryLimit": 2096103424,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047456,
+        "used": 1047432,
+        "available": 24
+      },
+      "old_space": {
+        "memorySize": 1187840,
+        "committedMemory": 1187840,
+        "capacity": 951544,
+        "used": 951400,
+        "available": 144
+      },
+      "code_space": {
+        "memorySize": 430080,
+        "committedMemory": 430080,
+        "capacity": 153152,
+        "used": 153152,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 266240,
+        "committedMemory": 266240,
+        "capacity": 238800,
+        "used": 238800,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047456,
+        "used": 0,
+        "available": 1047456
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 0.156,
+    "kernelCpuSeconds": 0.25,
+    "cpuConsumptionPercent": 40.6,
+    "maxRss": 22663168,
+    "pageFaults": {
+      "IORequired": 5696,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 1,
+      "writes": 5
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "=C:": "c:\\Users\\Brad\\Documents\\GitHub\\DemoBot",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "AMD_ENTRYPOINT": "vs/workbench/services/extensions/node/extensionHostProcess",
+    "APPDATA": "C:\\Users\\Brad\\AppData\\Roaming",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132498992265203671",
+    "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_6676_OIJIYQDIDTZQXIXE",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "ALECTO",
+    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "ELECTRON_RUN_AS_NODE": "1",
+    "HEROKU_BINPATH": "C:\\Program Files\\heroku\\bin\\\\heroku.cmd",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Brad",
+    "JD2_HOME": "C:\\Users\\Brad\\AppData\\Local\\JDownloader 2.0",
+    "LOCALAPPDATA": "C:\\Users\\Brad\\AppData\\Local",
+    "LOGONSERVER": "\\\\ALECTO",
+    "MEmu_Path": "C:\\Program Files (x86)\\Microvirt",
+    "MOZ_PLUGIN_PATH": "C:\\Program Files (x86)\\Foxit Software\\Foxit Reader\\plugins\\",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OneDrive": "C:\\Users\\Brad\\OneDrive",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "undefined",
+    "OS": "Windows_NT",
+    "Path": "C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\Users\\Brad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\adb;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Users\\Brad\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Brad\\Script;C:\\Users\\Brad\\AppData\\Local\\GitHubDesktop\\bin;D:\\Microsoft VS Code\\bin;C:\\Users\\Brad\\AppData\\Roaming\\npm;C:\\Program Files\\heroku\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PIPE_LOGGING": "true",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 122 Stepping 1, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "7a01",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PROVIDE_FULLSTACK_ACTION": "true",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "RECOMMENDER_API_URL": "https://f8a-analytics-2445582058137.production.gw.apicast.io:443/api/v2",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\Brad\\AppData\\Local\\Temp",
+    "THREE_SCALE_USER_TOKEN": "9e7da76708fe374d8c10fa752e72989f",
+    "TMP": "C:\\Users\\Brad\\AppData\\Local\\Temp",
+    "USERDOMAIN": "ALECTO",
+    "USERDOMAIN_ROAMINGPROFILE": "ALECTO",
+    "USERNAME": "Brad",
+    "USERPROFILE": "C:\\Users\\Brad",
+    "UUID": "b89a8101-637e-411f-ae2b-3bfb04ee5643",
+    "VERBOSE_LOGGING": "true",
+    "VSCODE_CWD": "D:\\Microsoft VS Code",
+    "VSCODE_HANDLES_UNCAUGHT_ERRORS": "true",
+    "VSCODE_IPC_HOOK": "\\\\.\\pipe\\ce3cc9d3f04328db4eee74e310a4ddd6-1.52.1-main-sock",
+    "VSCODE_IPC_HOOK_EXTHOST": "\\\\.\\pipe\\vscode-ipc-9df45887-879e-4110-9048-e7be5a456413-sock",
+    "VSCODE_LOG_STACK": "false",
+    "VSCODE_NLS_CONFIG": "{\"locale\":\"en-us\",\"availableLanguages\":{},\"_languagePackSupport\":true}",
+    "VSCODE_NODE_CACHED_DATA_DIR": "C:\\Users\\Brad\\AppData\\Roaming\\Code\\CachedData\\ea3859d4ba2f3e577a159bc91e3074c5d85c0523",
+    "VSCODE_PID": "6676",
+    "WALLABY_PRODUCTION": "true",
+    "windir": "C:\\WINDOWS"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\heroku\\client\\bin\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+    "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll"
+  ]
+}

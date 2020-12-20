@@ -4,11 +4,22 @@ const fetch = require('node-fetch');
 require('dotenv').config();
 const Discord = require('discord.js');
 const querystring = require('querystring');
+const fs = require('fs');
+const client = new Discord.Client();
+client.commands = new Discord.Collection();
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+for (const file of commandFiles) {
+  console.log(file);
+  const command = require(`./commands/${file}`);
+  // set a new item in the Collection
+  // with the key as the command name and the value as the exported module
+  client.commands.set(command.name, command);
+  console.log(command)
+}
 //BOT_URL=https://discord.com/oauth2/authorize?client_id=787936572754493481&scope=bot&permissions=268691458
 
 
 const prefix = "🥭:";
-const client = new Discord.Client();
 const _db_ = require('@replit/database');
 const db = new _db_();
 
@@ -38,99 +49,27 @@ client.on('ready', () => {
 //we need the join event listener
 
 client.on('message', async message => {
-  try {
     if (!message.content.startsWith(prefix) || message.author.bot) {
       return;
     }
-
     const args = message.content.slice(prefix.length).trim().split(' ');
     const command = args.shift().toLowerCase();
-
-    if (command === "list") {
-      for (i in args) {
-        message.reply(`Argument ${i}: ${args[i]}`);
-      }
-    }
-    if (command === "meow") {
-      const catPic = await fetch('https://aws.random.cat/meow');
-      catSon = await catPic.json();
-      message.reply(catSon.file);
-    }
-    if (command === "woof") {
-      const dogPic = await fetch('https://dog.ceo/api/breeds/image/random');
-      dogSon = await dogPic.json();
-      message.reply(dogSon.message);
-    }
-    if (command === "fox") {
-      const foxPic = await fetch('https://randomfox.ca/floof/');
-      foxSon = await foxPic.json();
-      message.reply(foxSon.image);
-    }
-
-    if (command === "strain"){
-      let strName = args[1];
-      if(args[2]){
-      for(let i = 2; i < args.length; i++){
-        strName = strName.concat("%20", args[i]);
-      }
-    }
-      let strainLoad = fetch(`https://strainapi.evanbusse.com/${process.env.STRAIN_KEY}/strains/search/name/${strName}`);
-      message.reply(strName);
-      message.reply(JSON.stringify(strainLoad));
-    }  //branching to deploy previous features
+    console.log(command);
     
-    if (command === "accuse") {
-      const argsNO = message.content.slice(prefix.length).trim().split(' ', 2)
-      console.log(argsNO[1]);
-      message.reply(`\n
-      :mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango:\n
-      Is that ${argsNO[1]}?! HOLY CRAP everybody get a load of this mango-ass mango!\n
-      :mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango:\n
-      `)
-    }
-    if (command == "verify") {
-      if (message.member.roles.has('787812999435649026')) {
-        console.log(`Yay, the author of the message has the role!`);
-      } else {
+    if (!client.commands.has(command)) return;
 
-        //let myRole = '787812999435649026';
-        message.member.addRole('787812999435649026').then(console.log).catch(console.error);
-
-        message.reply("You've broken through the firewall.");
-        console.log(`Nope, noppers, nadda.`);
-      }
-
+    try {
+      console.log('!got it!');
+      client.commands.get(command).execute(message, args);
+    } catch (error) {
+      console.error(error);
+      message.reply('there was an error trying to execute that command!');
     }
-    if (command === "hello") {
-      await sleep(3000);
-      message.reply(`Hey.`);
-      await sleep(30000);
-      message.reply('lololol made you look');
-    }
-    if (command === "why") {
-      message.reply(`The \"Mango\" in my name is a reference to the fact that mangoes are abnormally high in myrcene, a terpene believed to be responsible for increased THC CB1 reception. Or something. Whatever.`);
-    }
-    if (command === "favoritebudtender") {
-      let embed = new Discord.RichEmbed()
-        .setImage("https://www.tiktok.com/@its.demo.ysmf/video/6899908289325239558")
-        .setColor(0x91EE60)
-        .setDescription("https://www.tiktok.com/@its.demo.ysmf/video/6899908289325239558")
-        .setImage('https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/71808f71da0e212cbfa8872bbbb046c8~c5_720x720.jpeg?x-expires=1608404400&x-signature=yWJhrvcsv4NZQfSKdItNaQwE1e4%3D')
-        .setAuthor("Me, Demo!");
-      message.reply(embed);
-    }
-    if (command === "botherdemo") {
-      console.log("Ok, gonna annoy demo");
-      await sleep(between(5000, 180000));
-      message.channel.send("Hi, <@667084378672726022> lol")
-    }
-
-  } catch (err) { console.log(err); message.reply(`fucking idiot: ${err}`); }
 });
 
 client.on('guildMemberAdd', async member => {
   await sleep(5000)
-  member.guild.channels.get('784114534238912574').send(`Welcome to the server, ${member}! To reduce spam and minimize underage users on the server, we have implemented this bot! Please send the message \n":mango:: verify"\n to serve as your digital SOLEMN VOW that you are of age, not a cop, and generally cool.`);
+  member.guild.channels.cache.get('784114534238912574').send(`Welcome to the server, ${member}! To reduce spam and minimize underage users on the server, we have implemented this bot! Please send the message \n":mango:: verify"\n to serve as your digital SOLEMN VOW that you are of age, not a cop, and generally cool.`);
 });
 
 client.login(process.env.CLIENT_TOKEN);
