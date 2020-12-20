@@ -56,6 +56,24 @@ client.on('message', async message => {
       catSon = await catPic.json();
       message.reply(catSon.file);
     }
+    if (command === "woof") {
+      const dogPic = await fetch('https://dog.ceo/api/breeds/image/random');
+      dogSon = await dogPic.json();
+      message.reply(dogSon.message);
+    }
+    if (command === "fox") {
+      const foxPic = await fetch('https://randomfox.ca/floof/');
+      foxSon = await foxPic.json();
+      message.reply(foxSon.image);
+    }
+
+    /* if (command === "strain"{
+      let strName;
+      for(i = 1; i < args.length; i++){
+        strName = strName.concat('%20', args[i]);
+      }
+      fetch(`strainapi.evanbusse.com/${process.env.STRAIN_KEY}/strains/search/name/${strName}`);
+    }) */ //branching to deploy previous features
     
     if (command === "accuse") {
       const argsNO = message.content.slice(prefix.length).trim().split(' ', 2)
