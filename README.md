@@ -1,3 +1,5 @@
-# DemoBot
+# The Mangobot
 
-It's just a robot that we can offload mundane tasks to. It will very likely be ugly and unimpressive. Maybe it won't, though. Then won't you feel like a jackass.
+> Have you ever wondered what would happen if a mango and a robot found love in a hopeless place? Of course you have. You post your fanfiction publicly.
+
+
