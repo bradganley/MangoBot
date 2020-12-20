@@ -67,13 +67,17 @@ client.on('message', async message => {
       message.reply(foxSon.image);
     }
 
-    /* if (command === "strain"{
-      let strName;
-      for(i = 1; i < args.length; i++){
-        strName = strName.concat('%20', args[i]);
+    if (command === "strain"){
+      let strName = args[1];
+      if(args[2]){
+      for(let i = 2; i < args.length; i++){
+        strName = strName.concat("%20", args[i]);
       }
-      fetch(`strainapi.evanbusse.com/${process.env.STRAIN_KEY}/strains/search/name/${strName}`);
-    }) */ //branching to deploy previous features
+    }
+      let strainLoad = fetch(`https://strainapi.evanbusse.com/${process.env.STRAIN_KEY}/strains/search/name/${strName}`);
+      message.reply(strName);
+      message.reply(JSON.stringify(strainLoad));
+    }  //branching to deploy previous features
     
     if (command === "accuse") {
       const argsNO = message.content.slice(prefix.length).trim().split(' ', 2)
