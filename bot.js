@@ -9,12 +9,12 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
-  console.log(file);
+  //console.log(file);
   const command = require(`./commands/${file}`);
   // set a new item in the Collection
   // with the key as the command name and the value as the exported module
   client.commands.set(command.name, command);
-  console.log(command)
+  //console.log(command)
 }
 //BOT_URL=https://discord.com/oauth2/authorize?client_id=787936572754493481&scope=bot&permissions=268691458
 
@@ -59,12 +59,12 @@ client.on('message', async message => {
   }
     const args = message.content.slice(prefix.length).trim().split(' ');
     const command = args.shift().toLowerCase();
-    console.log(command);
+    //console.log(command);
 
     if (!client.commands.has(command)) return;
 
     try {
-      console.log('!got it!');
+      //console.log('!got it!');
       client.commands.get(command).execute(message, args);
     } catch (error) {
       console.error(error);
