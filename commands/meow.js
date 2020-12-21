@@ -11,6 +11,6 @@ module.exports = {
     name: 'meow',
     description: 'I\'m a cat!',
     execute(message, args) {
-        meow();
+        meow(message, args);
     }
 }
