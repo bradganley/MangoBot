@@ -2,6 +2,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fetch = require('node-fetch');
 
+const embed = new Discord.MessageEmbed()
+.setColor(0x91EE60)
+.setAuthor('Mangobot Strain Search');
+
 const strains = async (message, args) => {
   try {
     let strName = "";
@@ -17,10 +21,16 @@ const strains = async (message, args) => {
       strName = strBoy;
     }
     try { 
-     let strainLoad = await fetch(`https://strainapi.evanbusse.com/A1E9hg5/strains/search/name/${strName}`);
-     message.reply(strName);
+     let strainLoad = await fetch(`https://strainapi.evanbusse.com/A1E9hg5/strains/search/name/${strName.slice(0, strName.length-3)}`);
+     //message.reply(strName);
      strSon = await strainLoad.json();
-     message.reply(strSon[0].name);
+     //message.reply(strSon[0].name);
+     embed.setTitle(strSon[0].name)
+     .attachFiles(['assets/straincube.png'])
+     .setThumbnail('attachment://straincube.png')
+     .addField(`Name:`, `${strSon[0].name}`, false)
+     .addField(`Description:`, `${strSon[0].desc}`, true);
+     message.reply(embed);
     } catch (err){ console.log(err);}
 
     
