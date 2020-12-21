@@ -28,8 +28,8 @@ const strains = async (message, args) => {
      embed.setTitle(strSon[0].name)
      .attachFiles(['assets/straincube.png'])
      .setThumbnail('attachment://straincube.png')
-     .addField(`Name:`, `${strSon[0].name}`, false)
-     .addField(`Description:`, `${strSon[0].desc}`, true);
+     //.setField(`Name:`, `${strSon[0].name}`, false)
+     .setDescription(`${strSon[0].desc}`);
      message.reply(embed);
     } catch (err){ console.log(err);}
 
