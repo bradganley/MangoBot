@@ -22,7 +22,7 @@ for (const file of commandFiles) {
 const prefix = "🥭:";
 const _db_ = require('@replit/database');
 const db = new _db_();
-
+const mangos = ['mango', '🥭', 'MANGO', 'Mango'];
 function sleep(ms) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
@@ -49,13 +49,18 @@ client.on('ready', () => {
 //we need the join event listener
 
 client.on('message', async message => {
-    if (!message.content.startsWith(prefix) || message.author.bot) {
-      return;
+  if (!message.content.startsWith(prefix) || message.author.bot) {
+    for (var i = 0; i < mangos.length; i++) {
+      if (message.content.includes(mangos[i])) {
+        message.react('🥭');
+      }
     }
+    return;
+  }
     const args = message.content.slice(prefix.length).trim().split(' ');
     const command = args.shift().toLowerCase();
     console.log(command);
-    
+
     if (!client.commands.has(command)) return;
 
     try {
