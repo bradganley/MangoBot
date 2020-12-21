@@ -4,7 +4,7 @@ module.exports = {
     execute(message, args) {
       message.reply(`\n
       :mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango:\n
-      Is that ${argsNO[1]}?! HOLY CRAP everybody get a load of this mango-ass mango!\n
+      Is that ${args[0]}?! HOLY CRAP everybody get a load of this mango-ass mango!\n
       :mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango::mango:\n
       `)
 	}
