@@ -1,3 +1,6 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
 module.exports = {
     name: 'verify',
 	description: 'Verifies the realness of new members',
