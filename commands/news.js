@@ -11,7 +11,6 @@ const embed = new Discord.MessageEmbed()
 const feedGrab = async (message, args) => {
   let feed = await parser.parseURL('https://www.reddit.com/r/cannabis.rss');
   console.log(feed.title);
-  message.reply(feed.title);
   let embedBoy = "";
   for(i = 0; i < 3; i++){
     console.log(`**${feed.items[i].title}` + ':\n\t' + `**${feed.items[i].link}**` + '\n')
