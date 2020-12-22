@@ -13,7 +13,7 @@ module.exports = {
             //let myRole = '787812999435649026';
             message.member.roles.add('787812999435649026').then(console.log).catch(console.error);
     
-            message.reply("You have been granted access to the rest of the server! Much love  feel free to explore all the sections! If you wanna just talk come vibe with us in the the rotation chat!");
+            message.reply("You have been granted access to the rest of the server! Much love! feel free to explore all the sections! If you wanna just talk, come vibe with us in the the rotation chat!");
             console.log(`Nope, noppers, nadda.`);
           }    
 	}
