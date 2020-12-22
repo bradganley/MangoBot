@@ -12,7 +12,7 @@ const feedGrab = async (message, args) => {
   let feed = await parser.parseURL('https://www.reddit.com/r/cannabis.rss');
   console.log(feed.title);
   let embedBoy = "";
-  for(i = 0; i < 3; i++){
+  for(i = 0; i < 5; i++){
     console.log(`**${feed.items[i].title}` + ':\n\t' + `**${feed.items[i].link}**` + '\n')
     //embedBoy +=  `**${feed.items[i].title}**` + ':\n \t' + `${feed.items[i].link}` + '\n\n';
     embedBoy += `\[${feed.items[i].title}\]\(${feed.items[i].link} \"${feed.items[i].title}\"\)\n\n`;
