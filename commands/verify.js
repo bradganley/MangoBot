@@ -11,7 +11,7 @@ module.exports = {
           } else {
     
             //let myRole = '787812999435649026';
-            message.member.addRole('787812999435649026').then(console.log).catch(console.error);
+            message.member.roles.add('787812999435649026').then(console.log).catch(console.error);
     
             message.reply("You've broken through the firewall.");
             console.log(`Nope, noppers, nadda.`);
