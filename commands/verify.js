@@ -7,6 +7,7 @@ module.exports = {
     execute(message, args) {
         if (message.member.roles.cache.has('787812999435649026')) {
             console.log(`Yay, the author of the message has the role!`);
+            message.react('🤬');
           } else {
     
             //let myRole = '787812999435649026';
