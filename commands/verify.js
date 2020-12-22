@@ -5,7 +5,7 @@ module.exports = {
     name: 'verify',
 	description: 'Verifies the realness of new members',
     execute(message, args) {
-        if (message.member.roles.has('787812999435649026')) {
+        if (message.member.roles.cache.has('787812999435649026')) {
             console.log(`Yay, the author of the message has the role!`);
           } else {
     
