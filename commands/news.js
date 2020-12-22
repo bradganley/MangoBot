@@ -15,7 +15,7 @@ const feedGrab = async (message, args) => {
   for(i = 0; i < 5; i++){
     console.log(`**${feed.items[i].title}` + ':\n\t' + `**${feed.items[i].link}**` + '\n')
     //embedBoy +=  `**${feed.items[i].title}**` + ':\n \t' + `${feed.items[i].link}` + '\n\n';
-    embedBoy += `\[${feed.items[i].title}\]\(${feed.items[i].content} \"${feed.items[i].title}\"\)\n\n`;
+    embedBoy += `\[${feed.items[i].title}\]\(${feed.items[i].link} \"${feed.items[i].title}\"\)\n\n`;
   }
   embed.setDescription(embedBoy)
   .attachFiles(['assets/newsLogo.png'])
