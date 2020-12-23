@@ -18,7 +18,7 @@ const getUser = async (message, args) => {
             }
         });
         let paySon = await payLoad.json();
-        console.log(paySon.userInfo.user.bioLink);
+        message.reply(paySon.userInfo.user.bioLink.link);
         
     } catch (err) {
         console.log(err);
