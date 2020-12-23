@@ -4,6 +4,9 @@
     "description": "A bot to manage the solemn vows of our users and also deliver additional myrcene via first-pass metabolism",
     "main": "bot.js",
     "author": "Brad Ganley",
+    "scripts": {
+      "default": "node bot.js"
+    }
     "dependencies": {
         "@replit/database": "^2.0.0",
         "discord.js": "^12.5.1",
