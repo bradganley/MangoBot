@@ -8,7 +8,10 @@ const header = new fetch.Headers({
 });
 
 const getUser = async (message, args) => {
-    let query = endPoint + args[0];
+    var uNameraw = args[0];
+    var uName = uNameraw.replace('@', '');
+    console.log(uName.trim());
+    let query = endPoint + uName;
     try {
         let payLoad = await fetch(query, {
             "method": "GET",
@@ -19,15 +22,15 @@ const getUser = async (message, args) => {
         });
         let paySon = await payLoad.json();
         let embed = new Discord.MessageEmbed()
-        .setColor('#EE1D52')
-        .setTitle(paySon.userInfo.user.nickname)
-        .setThumbnail(paySon.userInfo.user.avatarMedium)
-        .setDescription(`_**${paySon.metaParams.title}**_\n
+            .setColor('#EE1D52')
+            .setTitle(paySon.userInfo.user.nickname)
+            .setThumbnail(paySon.userInfo.user.avatarMedium)
+            .setDescription(`_**${paySon.metaParams.title}**_\n
         ${paySon.metaParams.description}\n${paySon.metaParams.canonicalHref}`)
-        .setURL(paySon.metaParams.cononicalHref)
-        .setFooter(`Followers: ${paySon.userInfo.stats.followerCount}, Videos: ${paySon.userInfo.stats.videoCount}`);
+            .setURL(paySon.metaParams.cononicalHref)
+            .setFooter(`Followers: ${paySon.userInfo.stats.followerCount}, Videos: ${paySon.userInfo.stats.videoCount}`);
         message.channel.send(embed);
-        
+
     } catch (err) {
         console.log(err);
     }
