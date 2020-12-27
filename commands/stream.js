@@ -7,13 +7,11 @@ const endPoint = `http://www.omdbapi.com/?apikey=${OMDB_KEY}&s=`;
 const getID = async (message, args) => {
     try {
         let searchQ = '';
-
         for (word in args) {
             searchQ += `${args[word]}%20`;
         }
         searchQ = searchQ.slice(0, -3);
         console.log(searchQ);
-
         //console.log(searchQ);
         let omdbRes = await fetch(endPoint + searchQ);
         let omdbSon = await omdbRes.json();
@@ -38,7 +36,6 @@ const getID = async (message, args) => {
         message.channel.send(embed);
     } catch (err) { console.log(err) }
 }
-
 module.exports = {
     name: 'stream',
     description: 'It finds streams. It\'s fine. Don\'t worry about it.',
