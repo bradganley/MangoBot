@@ -1,4 +1,15 @@
-const hello = async () => {
+function sleep(ms) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+  }
+  
+  function between(min, max) {
+    return Math.floor(
+      Math.random() * (max - min) + min
+    )
+  }
+  const hello = async () => {
     await sleep(3000);
         message.reply(`Hey.`);
         console.log("got it");
