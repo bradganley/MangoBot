@@ -18,13 +18,18 @@ const getID = async (message, args) => {
         let results = omdbSon.Search;
         //console.log(omdbSon.Title);
         let description = '';
-        for(item = 0; item < 4; item++){
+        var count = 0;
+        for(item in results){
             description += `__**${results[item].Title}**__
             _${results[item].Year}_
             https://fsapi.xyz/movie/${results[item].imdbID}
             https://123files.club/imdb/play/?id=${results[item].imdbID}
             https://dbgo.fun/video.php?id=${results[item].imdbID}\n
             `;
+            count++;
+            if(count > 4){
+                break;
+            }
         }
         var embed = new Discord.MessageEmbed()
             .setColor('#0099ff')
