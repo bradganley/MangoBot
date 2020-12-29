@@ -1,35 +1,28 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fetch = require('node-fetch');
+const deepai = require('deepai');
 
 const apiKey = process.env.DEEPAI_KEY;
-const endPoint =  'https://api.deepai.org/api/deepdream'
+deepai.setApiKey(apiKey);
 
-const getDream = async (message) => {
-    if(!message.attachments){
-        message.reply('You idiot.');
-        return;
-    }
-    imgUrl = message.attachments.array()[0].url;
-    let body = 'image='+imgUrl
-    
+let getDream = async (message) => {
     try{
-        let resp = await fetch(endPoint, {
-            method: 'POST',
-            headers: {
-                'api-key': process.env.DEEPAI_KEY,
-            },
-            body: {
-                'image': imgUrl
-            }
-        });
-        let respSon = await resp.json();
-        console.log(respSon);
-    } catch(err){console.log}
+        let origUrl = message.attachments.array()[0].url;
+    var dream = await deepai.callStandardApi("deepdream", {
+        image: origUrl
+    });
+    console.log(dream);
+    message.reply(dream.output_url);
+} catch(err) { //console.log(err);
 }
+}
+
+
+
 module.exports = {
     name: 'dream',
-	description: '',
+	description: 'Runs an attached image through DeepAI\'s Deep Dream generative adversarial network',
     execute(message, args) {
         getDream(message);
 	}
