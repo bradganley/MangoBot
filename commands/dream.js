@@ -12,7 +12,7 @@ let getDream = async (message) => {
     var dream = await deepai.callStandardApi("deepdream", {
         image: origUrl
     });
-    console.log(dream);
+    //console.log(dream);
     message.reply(dream.output_url);
 } catch(err) { //console.log(err);
 }
@@ -24,6 +24,7 @@ module.exports = {
     name: 'dream',
 	description: 'Runs an attached image through DeepAI\'s Deep Dream generative adversarial network',
     execute(message, args) {
+        message.reply('Dreaming your dream. This takes a few seconds.')
         getDream(message);
 	}
 }
