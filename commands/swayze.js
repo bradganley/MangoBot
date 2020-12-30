@@ -7,13 +7,12 @@ const swayzes = [
   'http://i1.cdnds.net/14/02/618x400/patrick-swayze.jpg',
   'http://images5.fanpop.com/image/photos/31200000/Point-Break-patrick-swayze-31226708-1786-2560.jpg',
   'http://ilovehorses.net/wp-content/uploads/2014/06/patrick_swayze_tammen2.png',
-  'https://media3.giphy.com/media/v22JfwLFi6nNS/giphy.gif',
   'https://media0.giphy.com/media/69OUouHRzrvcA/giphy.gif',
   'https://media.giphy.com/media/a50HSsMdJhSuY/giphy.gif',
-  'https://media3.giphy.com/media/6YUzwGtRLH1QI/giphy.gif',
   'https://media4.giphy.com/media/rWEr9G9dTWBG/giphy.gif',
-  'https://media3.giphy.com/media/QIFG862Fp0Py8/giphy.gif',
-  'https://media1.giphy.com/media/3o6ZsTQCqCC8VFg0xi/giphy.gif?cid=ecf05e476lzyripyza911zskawzc74g3s3tpp02oqkcdxr5u&rid=giphy.gif'
+  'https://media1.giphy.com/media/3o6ZsTQCqCC8VFg0xi/giphy.gif?cid=ecf05e476lzyripyza911zskawzc74g3s3tpp02oqkcdxr5u&rid=giphy.gif',
+  'https://media1.tenor.com/images/dfa48588660a3e458c805a52ea30171e/tenor.gif',
+  'https://media.giphy.com/media/3o6Zt1bnn4IFOgnGxi/source.gif'
 ]
 
 module.exports = {
