@@ -18,6 +18,8 @@ for (const file of commandFiles) {
 }
 //BOT_URL=https://discord.com/oauth2/authorize?client_id=787936572754493481&scope=bot&permissions=268691458
 
+const cron = require('node-cron');
+let cronSet = false; //there's definitely a better way to do this
 
 const prefix = "🥭:";
 const _db_ = require('@replit/database');
@@ -33,6 +35,18 @@ roleSet = async (user) => {
 }
 
 client.on('ready', () => {
+  try {
+    let channel = client.channels.cache.get('791050941742448670');
+    channel.send(`Swayze has arrived`);
+    if (!cronSet) {
+      cron.schedule('20 4 * * *', () => { // Zulu/GMT
+        channel.send(':mango::news')  //can mangobot call itself??
+      })
+      cronSet = true; //it's probably even redundant
+    }
+  } catch (e) {
+    console.log('failed to schedule industry-news message')
+  }
   console.log(`Logged in as ${client.user.tag}. I'm ready for you, Daddy`);
 });
 
