@@ -37,7 +37,6 @@ roleSet = async (user) => {
 client.on('ready', () => {
   try {
     let channel = client.channels.cache.get('791050941742448670');
-    channel.send(`Swayze has arrived`);
     if (!cronSet) {
       cron.schedule('20 4 * * *', () => { // Zulu/GMT
         channel.send(':mango::news')  //can mangobot call itself??
