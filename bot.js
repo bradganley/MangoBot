@@ -39,7 +39,8 @@ client.on('ready', () => {
     let channel = client.channels.cache.get('791050941742448670');
     if (!cronSet) {
       cron.schedule('20 4 * * *', () => { // Zulu/GMT
-        channel.send(':mango::news')  //can mangobot call itself??
+        //channel.send(':mango::news')  //can mangobot call itself??
+        client.commands.get('news').selfExecute(channel)
       })
       cronSet = true; //it's probably even redundant
     }
