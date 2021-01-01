@@ -16,8 +16,10 @@ for (const file of commandFiles) {
   client.commands.set(command.name, command);
   //console.log(command)
 }
+
 //BOT_URL=https://discord.com/oauth2/authorize?client_id=787936572754493481&scope=bot&permissions=268691458
 
+const autonews = require('./autonews.js');
 const cron = require('node-cron');
 let cronSet = false; //there's definitely a better way to do this
 
@@ -39,8 +41,8 @@ client.on('ready', () => {
     let channel = client.channels.cache.get('791050941742448670');
     if (!cronSet) {
       cron.schedule('20 4 * * *', () => { // Zulu/GMT
-        //channel.send(':mango::news')  //can mangobot call itself??
-        client.commands.get('news').selfExecute(channel)
+        //channel.send(':mango::news')  //can mangobot call itself??    ----   No, pretty sure it can't....
+        autonews.execute(channel)
       })
       cronSet = true; //it's probably even redundant
     }
