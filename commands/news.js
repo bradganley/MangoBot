@@ -27,7 +27,10 @@ const feedGrab = async (message, args) => {
 
 module.exports = {
   name: 'news',
+
   description: 'Get the latest news articles about weed. It\'s the weed news.',
+
+
   execute(message, args) {
     feedGrab(message, args);
   }
