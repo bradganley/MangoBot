@@ -8,7 +8,6 @@ const embed = new Discord.MessageEmbed()
 
 const strains = async (message, args) => {
   try {
-    if(args.length){
     let strName = "";
     for (i in args) {
       let strBoy;
@@ -43,12 +42,11 @@ const strains = async (message, args) => {
         //.setField(`Name:`, `${strSon[0].name}`, false)
         .setDescription(endBarf);
       message.reply(embed);
-    
-    } catch (err) { console.log(err); }}  else { return message.reply("You didn't give me a strain to search for"); }
+    } catch (err) { console.log(err); }
 
 
   } catch (err) { console.log(err) }
-  }
+}
 
 module.exports = {
   name: 'strain',

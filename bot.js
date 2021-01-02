@@ -23,7 +23,17 @@ const prefix = "🥭:";
 const _db_ = require('@replit/database');
 const db = new _db_();
 const mangos = ['mango', '🥭', 'MANGO', 'Mango'];
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
 
+function between(min, max) {
+  return Math.floor(
+    Math.random() * (max - min) + min
+  )
+}
 
 roleSet = async (user) => {
   try {

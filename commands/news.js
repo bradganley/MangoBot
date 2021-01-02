@@ -9,7 +9,7 @@ const embed = new Discord.MessageEmbed()
   .setAuthor('Cannabis News');
 
 const feedGrab = async (message, args) => {
-  let feed = await parser.parseURL('https://hightimes.com/news/feed/');
+  let feed = await parser.parseURL('https://www.reddit.com/r/cannabis.rss');
   console.log(feed.title);
   let embedBoy = "";
   for(i = 0; i < 5; i++){
@@ -27,7 +27,7 @@ const feedGrab = async (message, args) => {
 
 module.exports = {
   name: 'news',
-  description: 'Gets strain info from the strain API',
+  description: 'Get the latest news articles about weed. It\'s the weed news.',
   execute(message, args) {
     feedGrab(message, args);
   }
