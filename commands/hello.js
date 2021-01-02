@@ -1,10 +1,12 @@
-const hello = async () => {
+const hello = async (message, args) => {
         message.reply(`Hey.`);
+        console.log("got it");
+        
 }
 module.exports = {
     name: 'hello',
 	description: 'Says hello',
     execute(message, args) {
-         hello();
+         hello(message, args);
 	}
 }
