@@ -38,8 +38,8 @@ const strains = async (message, args) => {
         }
       }
       embed.setTitle('Search Results')
-        .attachFiles(['assets/straincube.png'])
-        .setThumbnail('attachment://straincube.png')
+        .attachFiles(['assets/weed.png'])
+        .setThumbnail('attachment://weed.png')
         //.setField(`Name:`, `${strSon[0].name}`, false)
         .setDescription(endBarf);
       message.reply(embed);

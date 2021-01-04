@@ -32,11 +32,11 @@ const getID = async (message, args) => {
             }
         }
         var embed = new Discord.MessageEmbed()
+        .attachFiles(['assets/stream.png'])
+        .setThumbnail('attachment://stream.png')
             .setColor('#0099ff')
             .setTitle("Hey here's some shit")
-            //.setThumbnail(results[0].Poster)
             .setDescription(description)
-            //.setURL(`https://fsapi.xyz/movie/${results[0].imdbID}`)
             .setFooter('Don\'t worry about it');
         message.channel.send(embed);
     } catch (err) { console.log(err) }
