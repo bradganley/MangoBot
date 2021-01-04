@@ -1,3 +1,9 @@
+
+
+
+
+
+
 module.exports = {
     name: 'accuse',
 	description: 'Accuses The specifed user',

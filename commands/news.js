@@ -27,7 +27,7 @@ const feedGrab = async (message, args) => {
 
 module.exports = {
   name: 'news',
-  description: 'Gets strain info from the strain API',
+  description: 'Gets news',
   execute(message, args) {
     feedGrab(message, args);
   }
