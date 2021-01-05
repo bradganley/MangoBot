@@ -23,7 +23,6 @@ const getID = async (message, args) => {
             description += `__**${results[item].Title}**__
             _${results[item].Year}_
             https://fsapi.xyz/movie/${results[item].imdbID}
-            https://123files.club/imdb/play/?id=${results[item].imdbID}
             https://dbgo.fun/video.php?id=${results[item].imdbID}\n
             `;
             count++;
