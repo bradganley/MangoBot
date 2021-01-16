@@ -15,7 +15,7 @@ module.exports = {
             `You never find out that ${args[0]} has an infectious illness until AFTER the sesh`,
             `${args[0]} passes to the right.`,
             `${args[0]} can't roll. Period.`,
-            `I have children younger than ${args[0]\'s bong water}`
+            `I have children younger than ${args[0]}\'s bong water}`
         ]
         message.reply(accusations[rando(0, accusations.length-1)]);
     }
