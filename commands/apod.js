@@ -10,14 +10,18 @@ const apodGet = async (mes) => {
     let json = await raw.json();
     console.log(json);
     var embed = new Discord.MessageEmbed()
+    .attachFiles(['assets/nasa.png'])
     .setColor(0x91EE60)
-    .setAuthor('NASA')
+    .setAuthor('NASA', 'attachment://nasa.png', 'http://nasa.gov')
     .setTitle('NASA Astronomy Picture of the Day')
-    .setDescription(json.title + '\n' + json.explanation + '\n' + json.date)
+    //.setDescription(json.title + '\n' + json.explanation + '\n' + json.date)
+    .addField("Date", json.date, true)
+    .addField("Title", json.title, true)
+    .setDescription(json.explanation)
     .setImage(json.hdurl)
-    //.setThumbnail(json.url)
-    .setFooter('Your cat is trying to kill you annd I can prove it.');
-    mes.reply(embed)
+    .setURL(json.url)
+    .setFooter('Data provided by NASA.gov')
+    mes.channel.send(embed)
 }
 
 module.exports = {
