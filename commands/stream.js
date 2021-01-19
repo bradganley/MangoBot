@@ -6,6 +6,7 @@ let OMDB_KEY = process.env.OMDB_KEY;
 const endPoint = `http://www.omdbapi.com/?apikey=${OMDB_KEY}&s=`;
 const getID = async (message, args) => {
     try {
+        var embed = new Discord.MessageEmbed();
         let searchQ = '';
         for (word in args) {
             searchQ += `${args[word]}%20`;
@@ -22,21 +23,19 @@ const getID = async (message, args) => {
         for(item in results){
             description += `__**${results[item].Title}**__
             _${results[item].Year}_
-            https://fsapi.xyz/movie/${results[item].imdbID}
-            https://dbgo.fun/video.php?id=${results[item].imdbID}\n
-            `;
+            [Source 1](https://fsapi.xyz/movie/${results[item].imdbID}), [Source 2](https://dbgo.fun/video.php?id=${results[item].imdbID})\n`;
             count++;
             if(count > 4){
                 break;
             }
         }
-        var embed = new Discord.MessageEmbed()
-        .attachFiles(['assets/stream.png'])
+        
+        embed.attachFiles(['assets/stream.png'])
         .setThumbnail('attachment://stream.png')
-            .setColor('#0099ff')
-            .setTitle("Hey here's some shit")
-            .setDescription(description)
-            .setFooter('Don\'t worry about it');
+        .setColor('#0099ff')
+        .setTitle("Completely Legal™ Streaming Links")
+        .setDescription(description)
+        .setFooter('Don\'t worry about it');
         message.channel.send(embed);
     } catch (err) { console.log(err) }
 }
