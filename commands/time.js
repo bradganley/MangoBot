@@ -19,17 +19,17 @@ module.exports = {
 	description: 'time',
     execute(message) {
         let timeReport = new Discord.MessageEmbed()
-        .attachFiles('assets/moonClock.jpg')
-        .setImage('attachment://moonClock.jpg')
-        .addField('US/Pacific', moment().tz("America/Los_Angeles").format("hh:mm"), true)
-        .addField('US/Mountain', moment().tz("America/Denver").format("hh:mm"), true)
-        .addField('US/Central', moment().tz("America/Chicago").format("hh:mm"), true)
-        .addField('US/Eastern', moment().tz("America/Detroit").format("hh:mm"), true)
-        .addField('AUS/AWST', moment().tz("Australia/Perth").format("hh:mm"), true)
-        .addField('AUS/ACST', moment().tz("Australia/Darwin").format("hh:mm"), true)
-        .addField('AUS/ACDT', moment().tz("Australia/Broken_Hill").format("hh:mm"), true)
-        .addField('AUS/AEST', moment().tz("Australia/Brisbane").format("hh:mm"), true)
-        .addField('AUS/AEDT', moment().tz("Australia/Hobart").format("hh:mm"), true)
+        //.attachFiles('assets/moonClock.jpg')
+        //.setImage('attachment://moonClock.jpg')
+        .addField('US/Pacific', moment().tz("America/Los_Angeles").format("hh:mma"), true)
+        .addField('US/Mountain', moment().tz("America/Denver").format("hh:mma"), true)
+        .addField('US/Central', moment().tz("America/Chicago").format("hh:mma"), true)
+        .addField('US/Eastern', moment().tz("America/Detroit").format("hh:mma"), true)
+        .addField('AUS/AWST', moment().tz("Australia/Perth").format("hh:mma"), true)
+        .addField('AUS/ACST', moment().tz("Australia/Darwin").format("hh:mma"), true)
+        .addField('AUS/ACDT', moment().tz("Australia/Broken_Hill").format("hh:mma"), true)
+        .addField('AUS/AEST', moment().tz("Australia/Brisbane").format("hh:mma"), true)
+        .addField('AUS/AEDT', moment().tz("Australia/Hobart").format("hh:mma"), true)
         message.channel.send(timeReport)        
 	}
 }
