@@ -14,7 +14,8 @@ module.exports = {
             `${args[0]} passes to the right.`,
             `${args[0]} can't roll. Period.`,
             `I have children younger than ${args[0]}\'s bong water}`,
-            `I have footage proving that, utilizing a variety of techniques, ${args[0]} has stolen the Declaration of Independence.`
+            `I have footage proving that, utilizing a variety of techniques, ${args[0]} has stolen the Declaration of Independence.`,
+            `${args[0]} is a cop.`
         ]
         message.channel.send(accusations[rando(0, accusations.length-1)]);
     }
