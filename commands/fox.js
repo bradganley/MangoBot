@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 const fox = async (message, args) => {
-    const foxPic = await fetch('https://randomfox.ca/floof/');
-    foxSon = await foxPic.json();
+    const foxPic = await axios.get('https://randomfox.ca/floof/');
+    foxSon = await foxPic.data;
     message.reply(foxSon.image);
 }
 module.exports = {

@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 const meow = async (message, args) => {
-    const catPic = await fetch('https://aws.random.cat/meow');
-    catSon = await catPic.json();
+    const catPic = await axios.get('https://aws.random.cat/meow');
+    catSon = await catPic.data;
     message.reply(catSon.file);
 }
 module.exports = {

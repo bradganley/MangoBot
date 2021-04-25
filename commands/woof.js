@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 const woof = async (message,args) => {
-    const dogPic = await fetch('https://dog.ceo/api/breeds/image/random');
-    dogSon = await dogPic.json();
+    const dogPic = await axios.get('https://dog.ceo/api/breeds/image/random');
+    dogSon = await dogPic.data;
     message.reply(dogSon.message);
 }
 module.exports = {

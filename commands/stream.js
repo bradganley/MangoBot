@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 let OMDB_KEY = process.env.OMDB_KEY;
 const endPoint = `http://www.omdbapi.com/?apikey=${OMDB_KEY}&s=`;
@@ -14,8 +14,8 @@ const getID = async (message, args) => {
         searchQ = searchQ.slice(0, -3);
         console.log(searchQ);
         //console.log(searchQ);
-        let omdbRes = await fetch(endPoint + searchQ);
-        let omdbSon = await omdbRes.json();
+        let omdbRes = await axios.get(endPoint + searchQ);
+        let omdbSon = await omdbRes.data;
         let results = omdbSon.Search;
         //console.log(omdbSon.Title);
         let description = '';

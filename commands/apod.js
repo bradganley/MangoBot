@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 const key = process.env.NASA_KEY;
 const endPoint = `https://api.nasa.gov/planetary/apod?api_key=${key}&thumbs=true`;
 
 const apodGet = async (mes) => {
-    let raw = await fetch(endPoint);
-    let json = await raw.json();
+    let raw = await axios.get(endPoint);
+    let json = await raw.data;
     console.log(json);
     var embed = new Discord.MessageEmbed()
     .attachFiles(['assets/nasa.png'])
