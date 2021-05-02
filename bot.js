@@ -23,7 +23,7 @@ const autonews = require('./autonews.js');
 const cron = require('node-cron');
 let cronSet = false; //there's definitely a better way to do this
 
-const prefix = "🥭:";
+const prefix = "!mango";
 const _db_ = require('@replit/database');
 const db = new _db_();
 const mangos = ['mango', '🥭', 'MANGO', 'Mango'];
@@ -80,7 +80,7 @@ client.on('message', async message => {
 
 client.on('guildMemberAdd', async member => {
   await sleep(5000)
-  member.guild.channels.cache.get('784114534238912574').send(`Welcome to the server, ${member}! To reduce spam and minimize underage users on the server, we have implemented this bot! Please send the message \n":mango:: verify"\n to serve as your digital SOLEMN VOW that you are of age, not a cop, and generally cool.`);
+  member.guild.channels.cache.get('784114534238912574').send(`Welcome to the server, ${member}! To reduce spam and minimize underage users on the server, we have implemented this bot! Please send the message \`\`\`!mango verify\`\`\` to serve as your digital SOLEMN VOW that you are of age, not a cop, and generally cool.`);
 });
 
 client.login(process.env.CLIENT_TOKEN);

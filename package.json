@@ -5,7 +5,7 @@
     "main": "bot.js",
     "author": "Brad Ganley",
     "scripts": {
-        "start": "yarn bot.js"
+        "start": "nodemon bot.js"
     },
     "dependencies": {
         "@replit/database": "^2.0.0",
