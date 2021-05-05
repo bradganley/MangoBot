@@ -1,9 +1,7 @@
 /* The official bot of mango science weed smoking get high 
 fruit myrcene terpene chemistry intoxicant something whatever */
-const fetch = require('node-fetch');
 require('dotenv').config();
 const Discord = require('discord.js');
-const querystring = require('querystring');
 const fs = require('fs');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -23,7 +21,7 @@ const autonews = require('./autonews.js');
 const cron = require('node-cron');
 let cronSet = false; //there's definitely a better way to do this
 
-const prefix = "!mango";
+const prefix = process.env.PREFIX
 const _db_ = require('@replit/database');
 const db = new _db_();
 const mangos = ['mango', '🥭', 'MANGO', 'Mango'];
